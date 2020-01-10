@@ -2,8 +2,22 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.paranoid.dao.UserDao">
+<mapper namespace="com.paranoid.dao.UserMapper">
     <select id="getUserList" resultType="com.paranoid.pojo.User">
-    select * from user;
-  </select>
+        select * from user;
+    </select>
+    <!--    新增-->
+    <insert id="insertUser" parameterType="com.paranoid.pojo.User">
+        insert into user (userName,age) values (#{userName},#{age});
+    </insert>
+
+    <!--    更新-->
+    <update id="updateUser" parameterType="com.paranoid.pojo.User">
+        update user set userName=#{userName},age=#{age} where id=#{id};
+    </update>
+
+    <!--    删除-->
+    <delete id="deleteUser" parameterType="int">
+        delete from user where id=#{id};
+    </delete>
 </mapper>

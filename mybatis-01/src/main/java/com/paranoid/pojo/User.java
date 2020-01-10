@@ -8,6 +8,11 @@ public class User {
     public User() {
     }
 
+    public User(String userName, int age) {
+        this.userName = userName;
+        this.age = age;
+    }
+
     public User(int id, String userName, int age) {
         this.id = id;
         this.userName = userName;

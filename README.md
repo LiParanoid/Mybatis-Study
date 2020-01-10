@@ -74,7 +74,7 @@ String resource = "mybatis-config.xml";
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace 指定该mapper文件对应的接口-->
-<mapper namespace="com.paranoid.dao.UserDao">
+<mapper namespace="com.paranoid.dao.UserMapper">
 <!--id 对应接口中的方法  resultType 指定返回的数据的对应类型-->
     <select id="getUserList" resultType="com.paranoid.pojo.User">
     select * from user;
